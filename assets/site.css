@@ -27,11 +27,7 @@
 .site-header { position: relative; z-index: 5; border-bottom: 1px solid rgba(18,45,67,.08); background: rgba(251,250,246,.97); }
 .site-nav { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 25px; }
 .site-brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
-.site-brand-mark {
-  width: 46px; height: 46px; display: grid; flex: 0 0 46px; place-items: center;
-  border: 1px solid var(--kcc-gold); border-radius: 50%; color: #a8731c;
-  font-family: var(--kcc-serif); font-size: 16px; font-weight: 700;
-}
+.site-brand-logo { width: 58px; height: 58px; display: block; flex: 0 0 58px; object-fit: contain; mix-blend-mode: multiply; }
 .site-brand-name { display: block; color: var(--kcc-navy); font-family: var(--kcc-serif); font-size: 15px; font-weight: 700; line-height: 1.2; }
 .site-brand-tag { display: block; margin-top: 4px; color: var(--kcc-muted); font-size: 9px; letter-spacing: 1.2px; text-transform: uppercase; }
 .site-nav-links { display: flex; align-items: center; gap: 19px; }
@@ -93,20 +89,18 @@
 .site-footer p { margin: 0; font-size: 11px; }
 .site-footer a { color: #e8c77d; font-size: 11px; text-decoration: none; }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .site-nav { min-height: 76px; }
-  .site-nav-links { gap: 12px; }
-  .site-nav-links a { font-size: 11px; }
-  .page-columns { gap: 38px; }
-}
-@media (max-width: 760px) {
-  .site-wrap { width: min(100% - 36px, 560px); }
-  .site-nav { min-height: 72px; }
   .inner-page .menu-toggle { display: block; }
   .site-nav-links { position: absolute; top: calc(100% + 1px); right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 18px 17px; border-bottom: 1px solid var(--kcc-line); background: var(--kcc-paper); }
   .site-nav-links.is-open { display: flex; flex-direction: column; }
   .site-nav-links a { padding: 11px 5px; font-size: 13px; }
   .site-nav-links .site-nav-cta { margin-top: 5px; padding: 11px 14px; text-align: center; }
+  .page-columns { gap: 38px; }
+}
+@media (max-width: 760px) {
+  .site-wrap { width: min(100% - 36px, 560px); }
+  .site-nav { min-height: 72px; }
   .page-hero { padding: 54px 0; }
   .page-content { padding: 56px 0 64px; }
   .page-grid, .page-steps { grid-template-columns: 1fr; gap: 12px; }

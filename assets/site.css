@@ -57,6 +57,14 @@
 .page-card { padding: 27px 25px; border: 1px solid var(--kcc-line); background: var(--kcc-white); }
 .page-card-mark { display: block; margin-bottom: 16px; color: #a77c34; font-family: var(--kcc-serif); font-size: 14px; }
 .page-card p { margin: 0; font-size: 13px; }
+.vision-mission-section { padding: 72px 0 78px; background: #f1efe8; }
+.vision-mission-heading { margin: 0 auto 34px; text-align: center; }
+.vision-mission-heading h2 { margin: 0; color: var(--kcc-navy); font-family: var(--kcc-serif); font-size: clamp(30px, 3.5vw, 40px); font-weight: 400; }
+.vision-mission-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.vision-mission-card { padding: 30px; border: 1px solid var(--kcc-line); background: var(--kcc-white); }
+.vision-mission-card .page-label { margin-bottom: 12px !important; }
+.vision-mission-card h3 { margin: 0 0 13px; color: var(--kcc-navy); font-family: var(--kcc-serif); font-size: 23px; font-weight: 400; }
+.vision-mission-card p:last-child { margin: 0; color: #586770; font-size: 14px; line-height: 1.85; }
 .program-group { margin-top: 47px; }
 .program-group > h2 { margin: 0 0 19px; padding-bottom: 12px; border-bottom: 1px solid var(--kcc-line); color: var(--kcc-navy); font-family: var(--kcc-serif); font-size: clamp(24px, 3vw, 32px); font-weight: 400; }
 .program-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
@@ -171,6 +179,7 @@
   .page-hero { padding: 54px 0; }
   .page-content { padding: 56px 0 64px; }
   .page-grid, .page-steps { grid-template-columns: 1fr; gap: 12px; }
+  .vision-mission-grid { grid-template-columns: 1fr; gap: 12px; }
   .program-grid { grid-template-columns: 1fr; gap: 12px; }
   .shs-overview { grid-template-columns: 1fr; gap: 23px; padding-bottom: 35px; }
   .shs-academic-grid, .shs-technical-grid, .shs-list-columns { grid-template-columns: 1fr; }

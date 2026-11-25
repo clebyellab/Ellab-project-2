@@ -17,3 +17,20 @@ if (menuToggle && navigation) {
     }
   });
 }
+
+const contactForm = document.querySelector("#contact-form");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(contactForm);
+    const subject = String(formData.get("subject"));
+    const body = [
+      `Name: ${formData.get("fullName")}`,
+      `Email: ${formData.get("email")}`,
+      "",
+      String(formData.get("message"))
+    ].join("\n");
+    window.location.href = `mailto:kcc_1927@yahoo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+}

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#122d43">
   <meta name="description" content="Discover Kabankalan Catholic College—a learning community rooted in faith, guided by purpose, and committed to service.">
+  <link rel="stylesheet" href="assets/site.css">
   <title>Kabankalan Catholic College | Learn with Purpose</title>
   <style>
     :root {
@@ -367,6 +368,24 @@
       .intro-grid { gap: 50px; }
       .value { padding-right: 15px; padding-left: 15px; }
     }
+    @media (max-width: 900px) {
+      .menu-toggle { display: block; }
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 1px);
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 18px 17px;
+        background: var(--paper);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav-links.is-open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 12px 5px; }
+      .nav-links .nav-cta { margin-top: 5px; padding: 12px 15px; text-align: center; }
+    }
     @media (max-width: 650px) {
       .wrap { width: min(100% - 36px, 520px); }
       .nav { min-height: 75px; }
@@ -435,10 +454,14 @@
       </a>
       <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-links">☰</button>
       <div class="nav-links" id="primary-links">
-        <a href="#about">About</a>
-        <a href="#values">Our values</a>
-        <a href="#community">Community</a>
-        <a class="nav-cta" href="#community">Discover KCC <span aria-hidden="true">→</span></a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="events.html">Events</a>
+        <a href="trainers.html">Trainers</a>
+        <a href="pricing.html">Tuition</a>
+        <a href="starter-page.html">Getting started</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="contact.html">Discover KCC <span aria-hidden="true">→</span></a>
       </div>
     </nav>
   </header>
@@ -554,24 +577,6 @@
       <a class="back-top" href="#home">Back to top ↑</a>
     </div>
   </footer>
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navigation = document.querySelector("#primary-links");
-
-    menuToggle.addEventListener("click", () => {
-      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", String(!isOpen));
-      menuToggle.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
-      navigation.classList.toggle("is-open", !isOpen);
-    });
-
-    navigation.addEventListener("click", (event) => {
-      if (event.target.closest("a")) {
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation menu");
-        navigation.classList.remove("is-open");
-      }
-    });
-  </script>
+  <script src="assets/site.js"></script>
 </body>
 </html>

@@ -136,6 +136,9 @@
 .page-columns { display: grid; grid-template-columns: .9fr 1.1fr; gap: 70px; align-items: start; }
 .page-copy p { margin: 0 0 16px; }
 .page-copy p:last-child { margin-bottom: 0; }
+.school-credo { margin: 22px 0 0; padding: 18px 20px; border-left: 3px solid var(--kcc-gold); background: #f1efe8; }
+.school-credo p { margin: 0 0 7px; color: var(--kcc-navy); font-family: var(--kcc-serif); font-size: 23px; font-style: italic; line-height: 1.35; }
+.school-credo cite { color: #8a6c38; font-size: 10px; font-style: normal; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
 .page-note { padding: 23px 25px; border-left: 3px solid var(--kcc-gold); background: #f1efe8; }
 .page-note strong { display: block; margin-bottom: 5px; color: var(--kcc-navy); font-family: var(--kcc-serif); font-size: 17px; font-weight: 400; }
 .page-note p { margin: 0; font-size: 13px; }
